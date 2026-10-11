@@ -49,3 +49,25 @@ Technical documentation: `docs/palettes/`
 Palette tools: `tools/`
 
 Do not assume the old root-level sprite paths are still valid.
+
+## Sprite and Palette Workspace
+
+All new sprite and palette work belongs under `palettes/`.
+
+- Body sprites: `palettes/body/classes/<job>/<gender>/`
+- Body palette research: `palettes/body/docs/`
+- Hair sprites: `palettes/hair/styles/<gender>/<style_id>/`
+- Original hair colors: `palettes/hair/colors/original/`
+- Custom hair colors: `palettes/hair/colors/custom/`
+- Shared resources: `palettes/shared/`
+
+The previous root-level `classes/`, `experiments/`, and
+`hunter-assets/` locations have been reorganized.
+
+Before modifying existing scripts, inspect them for outdated paths.
+
+Prefer existing RitzRO documentation and established extraction
+methods. Do not install unnecessary GRF extraction software.
+
+For substantial new work, propose an approach and discuss
+architectural decisions before implementation.
