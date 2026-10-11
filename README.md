@@ -41,3 +41,52 @@ The primary technical reference is:
 `docs/palettes/RitzRO_PAL_Reverse_Engineering_v0.8.md`
 
 Older versions are retained for historical reference.
+
+
+## Character Class Reference Index
+
+RitzRO maintains class-specific sprite assets, reference palettes,
+experimental palettes, and documented index mappings.
+
+Each class is organized by sex because male and female sprites may
+use entirely different palette indices.
+
+| Class | Male documentation | Female assets | Status |
+|---|---|---|---|
+| Acolyte | [Male Acolyte](classes/acolyte/male/README.md) | Not yet collected | Working mapping |
+| Thief | [Male Thief](classes/thief/male/README.md) | Not yet collected | Working mapping |
+| Hunter | [Male Hunter](classes/hunter/male/README.md) | Not yet collected | Experimental mapping |
+
+### Class asset organization
+
+Each class follows this structure:
+
+    classes/<class>/<sex>/
+        README.md
+        <class>_<sex>.spr
+        <class>_<sex>.act
+        reference/
+        releases/
+        experiments/
+
+Some directories may be absent until assets are collected.
+
+### Palette documentation
+
+The primary technical reference is:
+
+[Palette Reverse-Engineering Guide v0.8](docs/palettes/RitzRO_PAL_Reverse_Engineering_v0.8.md)
+
+The class-specific READMEs provide quick-reference mappings.
+The main guide contains detailed evidence, methodology,
+diagnostic findings, and historical experiments.
+
+### Production deployment
+
+Approved palettes must be installed using the exact mojibake
+filenames and directories expected by the RitzRO RemoteClient.
+
+Korean path components are converted from CP949 to Windows-1252
+mojibake before installation.
+
+Never deploy experimental palettes without explicit approval.
